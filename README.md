@@ -1,0 +1,2 @@
+# UdemyPythonCourse
+exercises

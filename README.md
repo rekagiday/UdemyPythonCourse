@@ -1,2 +1,0 @@
-# UdemyPythonCourse
-exercises

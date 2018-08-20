@@ -1,0 +1,30 @@
+numbers = [1, 2, 3, 4, 5, 6]
+print(numbers)
+
+# doubled_numbers = []
+#
+# for number in numbers:
+#   doubled_numbers.append(number * 2)
+# print(doubled_numbers)
+
+# same, but shorter:
+doubles = [x*2 for x in numbers]
+print(doubles)
+
+print([x*10 for x in range(1,11)])
+print([bool(val) for val in [0, 1, [], '', 'hello']])
+
+string_list = [str(num) for num in numbers]
+print(string_list)
+
+# if & if/else in list comprehension
+evens = [num for num in numbers if num % 2 == 0]
+odds = [num for num in numbers if num %2 == 1]
+print(f"even numbers: {evens}, odd numbers: {odds}")
+
+print("divide every even number in list 'numbers' by 2 and multiply every odd number by 3:")
+print([num*3 if num % 2 == 1 else num/2 for num in numbers])
+
+sentence_with_vowels = "This is so much fun!"
+sentence_without_vowels = ''.join(char for char in sentence_with_vowels if char not in 'aeiou')
+print(sentence_without_vowels)

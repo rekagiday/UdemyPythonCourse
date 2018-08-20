@@ -14,3 +14,8 @@ print(data)
 
 data.remove(6)
 print(data)
+words = ['Python', 'is', 'fun']
+' '.join(words) # Python is fun
+
+name = ['Mrs', 'Smith']
+'. '.join(name) # Mrs. Smith

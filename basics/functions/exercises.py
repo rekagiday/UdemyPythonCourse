@@ -123,6 +123,9 @@ def isEven(num):
     return num % 2 == 0
 
 def partition(list, function):
+    """ sorts a list of numbers depending on partity to 2 lists (evens and odds)
+    returns with these lists as a list """
+
     evens = []
     odds = []
     for num in list:
@@ -132,4 +135,4 @@ def partition(list, function):
             odds.append(num)
     return [evens, odds]
 
-print(partition([1,2,3,4,5,6,7,8], isEven)) # [[2,4],[1,3]]
+print(partition([1,2,3,4,5,6,7,8], isEven))

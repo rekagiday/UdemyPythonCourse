@@ -1,5 +1,6 @@
-import banana
-import apple
+from banana import dip_in_chocolate as dip
+from apple import bake
 
-apple.bake()
-banana.peel()
+
+bake()
+dip()

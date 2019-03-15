@@ -2,6 +2,11 @@ class User:
 
     active_users = 0
 
+    @classmethod
+    def from_string(cls, str):
+        first_name, last_name, age = str.split(",")
+        return cls(first_name, last_name, int(age))
+
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
         self.last_name = last_name
@@ -28,13 +33,16 @@ class User:
         self.age += 1
         return f"Happy {self.age}th birthday, {self.first_name}"
 
-user1=User("Joe", "Smith", 73)
-user2=User("Anne", "Perry", 20)
-user3=User("Catherine", "Anderson", 42)
+#user1=User("Joe", "Smith", 73)
+#user2=User("Anne", "Perry", 20)
+#user3=User("Catherine", "Anderson", 42)
 #print(user1.full_name())
 #print(user2.likes("coffee"))
 #print(user1.is_senior())
 #print(user2.birthday())
-print(User.active_users)
-print(user2.logout())
-print(User.active_users)
+#print(User.active_users)
+#print(user2.logout())
+#print(User.active_users)
+user4 = User.from_string("Tom,Jones,89")
+print(user4.full_name())
+print(user4.birthday())
